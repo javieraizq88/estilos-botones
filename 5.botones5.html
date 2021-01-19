@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>HTMLWeb. WebScript. Diseño. Botones con estilo.</title>
+  <style type="text/css">
+    .enlace{cursor:default;}
+  </style>
+  <script language="JavaScript" type="text/javascript">
+    /**
+    * funcion demo del evento onclick en la tabla
+    */
+    function envia()
+    {
+      document.forms[0].submit();
+    }
+    /**
+    * funcion de captura de pulsación de tecla en Internet Explorer
+    */
+    var tecla;
+    function capturaTecla(e)
+    {
+        if(document.all)
+            tecla=event.keyCode;
+        else
+        {
+            tecla=e.which;
+        }
+     if(tecla==13)
+        {
+            document.forms[0].submit();
+        }
+    } 
+    document.onkeydown = capturaTecla;
+</script>
+</head>
+<body>
+<div align="center">
+  <form name="form1" action="http://www.yahoo.es" target="_blank" method="post">
+    <input type="text" name="prueba">
+  </form>
+  <a class="enlace" href="#" onclick="document.forms.form1.submit();return false"><img src="images/boton.gif" width="85" height="24" border="0" alt="enviar"></a>
+</div>
+</body>
+</html>
