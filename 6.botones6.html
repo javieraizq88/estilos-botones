@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>HTMLWeb. WebScript. Diseño. Botones con estilo.</title>
+    <style type="text/css">
+        .enlace,
+        .enlace:hover {
+            font-size: 10px;
+            font-family: Verdana, Helvetica;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        .tablaBoton {
+            cursor: default;
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript">
+        var contador = false;
+        /**
+        * funcion demo del evento onclick en la tabla
+        */
+        function envia() {
+            if (contador == false)
+                document.forms[0].submit();
+        }
+        function envia2() {
+            document.forms[0].submit();
+            setTimeout("contador=false", 500);
+        }
+        /**
+        * funcion de captura de pulsación de tecla en Internet Explorer
+        */
+        var tecla;
+        function capturaTecla(e) {
+            if (document.all)
+                tecla = event.keyCode;
+            else {
+                tecla = e.which;
+            }
+            if (tecla == 13) {
+                document.forms[0].submit();
+            }
+        }
+        document.onkeydown = capturaTecla;
+    </script>
+</head>
+
+<body>
+    <div align="center">
+        <form name="form1" action="http://www.yahoo.es" target="_blank" method="post">
+            <input type="text" name="prueba">
+        </form>
+    </div>
+    <table class="tablaBoton" cellpadding="0" cellspacing="0" border="0" align="center" onclick="envia()">
+        <tr>
+            <td rowspan="3" width="5" height="19"><img src="images/curva_azul_izq.gif" width="5" height="19" border="0"
+                    alt=""></td>
+            <td height="1" width="70" bgcolor="#638cb5"><img src="images/bs.gif" width="1" height="1" border="0" alt="">
+            </td>
+            <td rowspan="3" align="right" width="5" height="19"><img src="images/curva_azul_der.gif" width="5"
+                    height="19" border="0" alt=""></td>
+        </tr>
+        <tr align="center">
+            <td height="17" bgcolor="#638cb5"><a href="#" onclick="contador=true;envia2();return false"
+                    class="enlace">enviar</a></td>
+        </tr>
+        <tr>
+            <td height="1" width="70" bgcolor="#638cb5"><img src="images/bs.gif" width="1" height="1" border="0" alt="">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
