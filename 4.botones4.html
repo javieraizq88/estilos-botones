@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style type="text/css">
+        .boton2{
+               font-size:10px;
+               font-family:Verdana,Helvetica;
+               font-weight:bold;
+               color:white;
+               background:#638cb5;
+               border:0px;
+               width:70px;
+               height:15px;          
+              }
+      </style>
+    <form name="form1" action="http://www.yahoo.es" target="_blank" method="post">
+    <div align="center"><input type="text" name="prueba"></div><br>
+    <table cellpadding="0" cellspacing="0" border="0" align="center">
+      <tr>
+        <td rowspan="3" width="5" height="19"><img src="images/curva_azul_izq.gif" width="5" height="19" border="0" alt=""></td>
+        <td height= "1" width="70" bgcolor="#638cb5"><img src="images/bs.gif" width="1" height="1" border="0" alt=""></td>
+        <td rowspan="3" align="right" width="5" height="19"><img src="images/curva_azul_der.gif" width="5" height="19" border="0" alt=""></td>
+      </tr>
+      <tr align="center">
+        <td height= "17" bgcolor="#638cb5"><input type="submit" name="envio" value="enviar" class="boton2"></td>
+      </tr>
+      <tr>
+        <td height= "1" width="70" bgcolor="#638cb5"><img src="images/bs.gif" width="1" height="1" border="0" alt=""></td>
+      </tr>
+    </table>
+    </form>
+
+<div align="center"><a href= "#"onclick="document.forms.form1.envio.disabled=true;return false;">desactivar</a></div>
+
+<div align="center"><a href= "#"onclick="document.forms.form1.envio.disabled=false;return false;">activar</a></div>
+</body>
+</html>
