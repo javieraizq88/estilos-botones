@@ -1,45 +1,14 @@
-<html>
-
-
-  <script language="JavaScript" type="text/javascript">
-    /**
-    * funcion demo del evento onclick en la tabla
-    */
-    function envia() {
-      document.forms[0].submit();
-    }
-    /**
-    * funcion de captura de pulsación de tecla en Internet Explorer
-    */
-    var tecla;
-    function capturaTecla(e) {
-      if (document.all)
-        tecla = event.keyCode;
-      else {
-        tecla = e.which;
-      }
-      if (tecla == 13) {
-        document.forms[0].submit();
-      }
-    }
-    document.onkeydown = capturaTecla;
-  </script>
-</head>
-
-<body>
-
-</body>
-
-</html>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="5.botones5.css">
+  <link rel="stylesheet" href="5.botones5.js">
   <title>Document</title>
 </head>
+
 <body>
   <div align="center">
     <form name="form1" action="http://www.yahoo.es" target="_blank" method="post">
@@ -49,4 +18,5 @@
         width="85" height="24" border="0" alt="enviar"></a>
   </div>
 </body>
+
 </html>
