@@ -1,0 +1,13 @@
+.enlace,
+.enlace:hover {
+    font-size: 10px;
+    font-family: Verdana, Helvetica;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    cursor: default;
+}
+
+.tablaBoton {
+    cursor: default;
+}
